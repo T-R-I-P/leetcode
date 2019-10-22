@@ -8,6 +8,18 @@ Practice how to publish a PR correctly and write some "testable" code.
 - [ ] Deploy CI/CD with jerkins
 - [ ] Apply a bot to assist merge PR
 
+## Prerequisite
+
+* Install gtest
+  Note that we should compile gtest by ourself. I do not know the reason ......  
+  1. `sudo -s`
+  2. `apt install libgtest-dev`
+  3. `cd /usr/src/googletest/googletst && mkdir build && cd build`
+  4. `cmake ../ && make`
+  5. `cp libgtest*.a /usr/local/lib/`
+  6. ctrl + D
+
+
 ## Useful resources
 
 The following are tutorial resources.  
