@@ -25,3 +25,4 @@ Practice how to publish a PR correctly and write some "testable" code.
 The following are tutorial resources.  
 * [Do not issue pull requests from your master branch](https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch)
 * [bors-ng/bors-ng](https://github.com/bors-ng/bors-ng)
+* [googletest FAQ](https://github.com/doo/googletest/blob/master/wiki/FAQ.wiki)
