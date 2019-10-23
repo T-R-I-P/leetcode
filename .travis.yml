@@ -1,0 +1,9 @@
+language: cpp
+sudo: false
+dist: trusty
+compiler:
+  - gcc
+os:
+  - linux
+script:
+  - if [ $TRAVIS_OS_NAME == linux ]; then make && make test; fi

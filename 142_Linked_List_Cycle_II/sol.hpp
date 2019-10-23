@@ -1,11 +1,18 @@
-/* *
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+#ifndef SOL_HPP
+#define SOL_HPP
+
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+typedef struct ListNode {
+  int val;
+  ListNode *next;
+  ListNode(int x) : val(x), next(NULL) {}
+} ListNode;
+
 class Solution {
   public:
     ListNode *detectCycle(ListNode *head) {
@@ -69,3 +76,5 @@ class Solution {
       return (void*)((long)address & ~0x1L);
     }
 };
+
+#endif
