@@ -5,10 +5,17 @@ compiler:
   - gcc
 os:
   - linux
-git:
-  - submodules: false
-before_install:
-  - git submodule update --init --remote --recursive
+install:
+  - git submodule init
+  - git submodule update
 script:
-  - if [ $TRAVIS_OS_NAME == linux ]; then mkdir build && cd build && cmake ../ && make && make test; fi
-
+  - |
+    if [ $TRAVIS_OS_NAME == linux ]; then 
+      mkdir -p build
+      cd build
+      cmake ../
+      make
+      ctest
+    fi
+after_success:
+  echo "SUCCESS"
