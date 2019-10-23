@@ -1,10 +1,22 @@
 language: cpp
-sudo: false
+sudo: required
 dist: trusty
 compiler:
-  - gcc
-os:
-  - linux
+  - g++
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env:
+        - MATRIX_EVAL="CXX=g++-7 && CXX_FLAGS=-std=c++11"
+before_install:
+  - eval "${MATRIX_EVAL}"
+  - sudo apt-get update -qq
 install:
   - git submodule init
   - git submodule update
@@ -19,3 +31,7 @@ script:
     fi
 after_success:
   echo "SUCCESS"
+notification:
+  email:
+    on_success: never
+    on_failure: always
