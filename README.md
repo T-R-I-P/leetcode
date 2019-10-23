@@ -1,4 +1,4 @@
-# leetcode
+# leetcode [![Build Status](https://www.travis-ci.org/{T-R-I-P}/{leetcode}.svg?branch=master)](https://www.travis-ci.org/{T-R-I-P}/{leetcode})
 
 ## Purpose
 
